@@ -1,4 +1,7 @@
-### first test script in RStudio
+### PATH
+###
+### R에서도 운영체제 명령어와 같이 파일, 폴더 등 시스템 관리가 가능.
+### 프로젝트의 library를 생성하고, 관련 파일을 관리하면 편리.
 
 ### R 설치 경로 확인
 R.home()
@@ -22,3 +25,17 @@ system.file()
 ### 경로에서 파일이름과 디렉터리경로 분리하기
 basename()
 dirname()
+
+
+### 파일 생성
+file.create()
+### 파일 삭제
+file.remove()
+### 파일 복사
+file.copy('file_name','directory_name')
+### 파일 이동
+install.packages('filesstrings')
+library('filesstrings')
+file.move('P04626.fasta','fasta/')
+### rename
+file.rename('file_name','file_rename')

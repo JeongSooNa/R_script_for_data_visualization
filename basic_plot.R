@@ -20,3 +20,4 @@ par(mfrow=c(1,2))
 plot(x,sigmoid(x),col='red')
 plot(log(x),log(sigmoid(x)),col='blue')
 par(mfrow=c(1,1))
+
