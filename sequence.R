@@ -37,6 +37,8 @@ dotPlot(cdk4_seq,cdk6_seq, main="CDK4 vs CDK6")
 ###
 par(mfrow=c(1,2))
 dotPlot(egfr_seq,erbb2_seq, main="EGFR vs ERBB2")
+abline(a=0,b=1,col="red",lty=6)
 dotPlot(cdk4_seq,cdk6_seq, main="CDK4 vs CDK6")
+abline(a=0,b=1,col="red",lty=6)
 par(mfrow=c(1,1))
 
