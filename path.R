@@ -7,7 +7,7 @@
 R.home()
 ### working 디렉토리 확인 및 설정 
 getwd()
-setwd()
+setwd('river/')
 ### 라이브러리(패키지)가 저정되어 있는 경로 확인
 .libPaths()
 ### 새로운 디렉터리 만들기 
@@ -36,6 +36,6 @@ file.copy('file_name','directory_name')
 ### 파일 이동
 install.packages('filesstrings')
 library('filesstrings')
-file.move('P04626.fasta','fasta/')
+file.move('gota-river-near-sjotopvannersbur.csv','river/')
 ### rename
 file.rename('file_name','file_rename')
