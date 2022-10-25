@@ -17,7 +17,16 @@ sigmoid = function(x){
 x <- seq(-5,5,0.01)
 x
 par(mfrow=c(1,2))
-plot(x,sigmoid(x),col='red')
-plot(log(x),log(sigmoid(x)),col='blue')
+plot(x,sigmoid(x),
+     main = "sigmol plot",
+     col = 'red',
+     type = 'l')
+lines(c(-5,5),c(0,1), lty = 3)
+lines(c(-5,0,5),c(0,0.5,1), type = "h")
+plot(log(x),log(sigmoid(x)),
+     main = "log sigmol plot",
+     col = 'blue',
+     type = 'l',
+     ylim = c(-0.8,0))
 par(mfrow=c(1,1))
 

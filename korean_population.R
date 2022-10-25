@@ -1,7 +1,7 @@
 #남북한의 인구
 install.packages("ggplot2")
 install.packages("ggmap")
-library(ggplot2)
+library("ggplot2")
 library(ggmap)
 dat1<-read.table(textConnection("
 Seoul     9,794,304 
@@ -30,3 +30,5 @@ koreamap
 circle_scale=0.000005
 koreamap+geom_point(aes(x=lon, y=lat),data=dat1, col='purple',
                     alpha=0.4, size=dat1$pop*circle_scale)
+
+
