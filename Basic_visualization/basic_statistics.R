@@ -2,7 +2,51 @@
 # basic statistics in R #
 #########################
 
-## function
+## mathmatics function
+a <- c(2,7,5,3,1,4,6)
+## sort
+sort(a)
+## reverse sort
+rev(a)
+## rank(a)
+rank(a)
+## order index (each sorted values index)
+order(a)
+sort.list(a)
+order(a, decreasing = TRUE) # reverse
+## log
+log(a)
+log(a, base = 10)
+## exp
+exp(a)
+## sqrt
+sqrt(a)
+## abs
+abs(a)
+## round
+round(sqrt(a),2)
+## cumsum
+cumsum(a)
+## cumprod
+cumprod(a)
+## cummin
+cummin(a)
+## cummax
+cummax(a)
+## match
+match(c(2,4,6,8),a)
+## union
+union(a,c(1,2,10))
+## intersect
+intersect(a,c(1,2,10))
+## set difference
+setdiff(a,c(1,2,10))
+## ckeck element
+is.element(a,c(1,2,10))
+## combination
+choose(4,2)
+
+## statistics function
 a <- c(2,7,5,3,1,4,6)
 ## sumation
 sum(a)
