@@ -165,3 +165,11 @@ update.packages() # get alert each package (yes)
 ## error > change library path
 #.libPaths("C:/Users/jsna/AppData/Local/R/win-library/4.2")
 .libPaths()
+
+## Next step
+## if else
+x <- 2
+if(x >= 0) sqrt(x) else y<- abs(x)
+x <- -2
+ifelse(x >=0, sqrt(x), abs(x))
+## switch

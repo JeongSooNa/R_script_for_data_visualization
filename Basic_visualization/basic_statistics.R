@@ -80,3 +80,10 @@ mean(scale(a))
 var(scale(a))
 sd(scale(a))
 
+## sampling
+x <- 1:10
+sample(x,5)
+sample(x)
+sample(x, 5, replace = TRUE)
+## bernoulli distribution
+sample(c(0,1), 10, replace = TRUE, prob = c(0.5,0.5))

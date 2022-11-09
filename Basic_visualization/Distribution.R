@@ -32,3 +32,11 @@ if(0)"
 "
 
 ## example
+
+## standard normal distribution
+curve(dnorm(x), from = -3, to = 3, main = "Density of N(0,1)", ylab="")
+
+## Chisqure distribution
+d <- c(1,5,10)
+dev.off() # delete recent plot
+for(i in d) curve(dchisq(x,df=i),0,20,add=TRUE)
