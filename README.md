@@ -1,6 +1,11 @@
 # R_script_for_data_visualization
-
-
+#### update at : 2022.11.09
+#### Create at : 2022.10.18
+#### JeongSoo Na
+##### Assistant Scientist
+##### Ai Development Operation Team
+##### Syntekabio
+##### Korea(South)
 ---
 ## plot options
 |**Option**|**information**|
