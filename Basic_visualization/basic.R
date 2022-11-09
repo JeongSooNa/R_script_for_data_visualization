@@ -105,3 +105,53 @@ d[d$score >= 80,]
 d[d$name == "Kim",]
 d[d$name == "Kim",3]
 d[d$name == "Kim","score"]
+d[d$name=="Kim",c("id","score")]
+names(d) # get key
+names(d)[3]
+
+## table
+## random 100 sample in poison distribution (mean : 5)
+table(rpois(100,5)) 
+## random 100 sample in two binomial distribution (p : 0.5, 0.2)
+table(rbinom(100,10,0.5),rbinom(100,10,.2))
+## ftable : flat contingency table
+ftable(Titanic, row.vars = 1:3)
+ftable(Titanic, row.vars = 1:2, col.vars = "Survived")
+ftable(Titanic, row.vars = 2:1, col.vars = "Survived")
+
+x <- ftable(mtcars[c("cyl","vs","am","gear")])
+x
+ftable(x, row.vars = c(2,4))
+ftable(mtcars$cyl, mtcars$vs, mtcars$am, mtcars$gear, row.vars = c(2,4),
+       dnn = c("Cylinders", "V/S", "Transmission", "Gears"))
+
+## Time Series
+t <- ts(1:10, frequency = 4, start = c(2001,2))
+t
+str(t)
+set.seed(100) # set random seed
+z <- ts(matrix(rnorm(300),100,3),start = c(1961,1), frequency = 12)
+z
+class(z)
+head(z)
+plot(z)
+plot(z,plot.type = "single", lty=1:3)
+
+
+## control class
+a <- matrix(c(1:10),2,5)
+is.data.frame(a)
+is.matrix(a)
+
+## using source code
+## Can using source code in web site
+source("https://raw.githubusercontent.com/JeongSooNa/R_script_for_data_visualization/main/test_set/basic_plot.R")
+
+## package & library
+#install.packages("ggplot2")
+#library("ggplot2")
+#search() # check used R package
+
+## error > change library path
+## .libPaths("C:/Users/jsna/Desktop/R_script/R_script_for_data_visualization/library")
+## .libPaths()
