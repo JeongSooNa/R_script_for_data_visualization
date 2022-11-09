@@ -137,6 +137,14 @@ head(z)
 plot(z)
 plot(z,plot.type = "single", lty=1:3)
 
+## check class & variable
+ls()
+## remove class & variable
+rm(z)
+rm(list = ls())
+## check directory
+dir()
+
 
 ## control class
 a <- matrix(c(1:10),2,5)
@@ -148,10 +156,12 @@ is.matrix(a)
 source("https://raw.githubusercontent.com/JeongSooNa/R_script_for_data_visualization/main/test_set/basic_plot.R")
 
 ## package & library
-#install.packages("ggplot2")
-#library("ggplot2")
-#search() # check used R package
+install.packages("ggplot2")
+library("ggplot2")
+search() # check used R package
+update.packages() # get alert each package (yes)
+
 
 ## error > change library path
-## .libPaths("C:/Users/jsna/Desktop/R_script/R_script_for_data_visualization/library")
-## .libPaths()
+#.libPaths("C:/Users/jsna/AppData/Local/R/win-library/4.2")
+.libPaths()
