@@ -32,6 +32,7 @@ log_dat <- data.frame(log_μM, log_DMSO)
 
 ## R-Square
 lm_dat = lm(DMSO~μM, data=dat)
+summary(lm_dat)
 summary(lm_dat)$r.squared
 
 ## plot
@@ -40,12 +41,12 @@ ggplot(data=dat, aes(x=μM, y=DMSO)) +
   geom_point(aes(size=μM, color=DMSO)) +
   labs(title = "D137", x = "μM", y = "% for DMSO") +
   stat_smooth(method = "lm") +
-  annotate("text", x=-4, y=-2, label = "R-Square : "+summary(lm_dat)$r.squared, size = 4)
+  annotate("text", x=10, y=-2, label = paste("R-Square : ", as.character(round(summary(lm_dat)$r.squared,2))), size = 4)
 # log A548 plot
 ggplot(data=log_dat, aes(x=log_μM, y=log_DMSO)) + 
   geom_point(aes(size=log_μM, color=log_DMSO)) +
   labs(title = "D137", x = "log(μM)", y = "log(% for DMSO)") +
-  stat_smooth()
+  stat_smooth(method = "lm")
 
 summary(lm_dat)
 plot(dat)
